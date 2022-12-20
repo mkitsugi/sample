@@ -33,14 +33,20 @@ const Component: React.FC = () => {
             <NftImagesSlideShow />
           </Box>
 
+          <div>
           <Text width="360px" align={"center"}>
-          ALL PROCEEDS DIRECTED TO
-PUBLIC GOODS FUNDING
-MINTING IS COMPLETE
-FOLLOW UPDATES ON DONATION PROCESS
-HTTPS://TWITTER.COM/OPTIPUNK
-      </Text>
-
+          OASYSPUNK ARE UNIQUE COLLECTIBLE PUNKS
+          </Text>
+          <Text width="360px" align={"center"}>
+           AROUND THE OASYS BLOCKCHAIN. 
+          </Text>
+          <Text width="360px" align={"center"}>
+          FOLLOW UPDATES ON COMMUNITY DEVELOPMENT PROCESS
+          </Text>
+          <Text width="360px" align={"center"}>
+          HTTPS://TWITTER.COM/OASYS_PUNKS
+          </Text>
+          </div>
           <div>
             {address ? (
               <Button onClick={mint} disabled={store.isClaiming}>
@@ -62,7 +68,7 @@ HTTPS://TWITTER.COM/OPTIPUNK
           </CardBody>
         </Card>
         <Text pt={2} fontSize="xs" textAlign={'center'}>
-              goerli testnet
+              oasys testnet
             </Text>
         </VStack>
 
