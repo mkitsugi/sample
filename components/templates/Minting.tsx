@@ -26,7 +26,7 @@ const Component: React.FC = () => {
       <Fade>
         
         <VStack spacing={6}>
-        <Card borderRadius={"30"} bgColor = "white" size = "lg" boxShadow={"2xl"}>
+        <Card borderRadius={{base: "0",sm :"30", md: "30"}} bgColor = "whiteAlpha.700" size = {{base: "md", md: "lg"}} boxShadow={"2xl"}>
           <CardBody>
           <VStack spacing={5}>
           <Box width="240px" height="240px" >
@@ -34,16 +34,16 @@ const Component: React.FC = () => {
           </Box>
 
           <div>
-          <Text width="360px" align={"center"}>
+          <Text width={{base: "300px", md: "360px"}} align={"center"} fontSize={{base: "xs", md : "md"}}>
           OASYSPUNK ARE UNIQUE COLLECTIBLE PUNKS
           </Text>
-          <Text width="360px" align={"center"}>
+          <Text width={{base: "300px", md: "360px"}} align={"center"} fontSize={{base: "xs", md : "md"}}>
            AROUND THE OASYS BLOCKCHAIN. 
           </Text>
-          <Text width="360px" align={"center"}>
+          <Text width={{base: "300px", md: "360px"}} align={"center"} fontSize={{base: "xs", md : "md"}}>
           FOLLOW UPDATES ON COMMUNITY DEVELOPMENT PROCESS
           </Text>
-          <Text width="360px" align={"center"}>
+          <Text width={{base: "300px", md: "360px"}} align={"center"} fontSize={{base: "xs", md : "md"}}>
           HTTPS://TWITTER.COM/OASYS_PUNKS
           </Text>
           </div>
@@ -55,8 +55,8 @@ const Component: React.FC = () => {
                   : `MINT (${store.claimPrice} OAS)`}
               </Button>
             ) : (
-              <Button onClick={connectWallet}>
-                <Text fontSize="s">Connect Wallet</Text>
+              <Button onClick={connectWallet} bgColor = "black">
+                <Text fontSize="s" color="white">Connect Wallet</Text>
               </Button>
             )}
             <Text pt={2} fontSize="xs" textAlign={'center'} paddingTop = "5">
@@ -67,7 +67,7 @@ const Component: React.FC = () => {
           </VStack>
           </CardBody>
         </Card>
-        <Text pt={2} fontSize="xs" textAlign={'center'}>
+        <Text pt={2} fontSize="md" textAlign={'center'}>
               oasys testnet
             </Text>
         </VStack>

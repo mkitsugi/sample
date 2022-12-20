@@ -24,22 +24,19 @@ const Component: React.FC = () => {
       zIndex={10}
     >
       <HStack w="full" alignItems={"center"} padding = "5" >
-      <Box w="40">
+      <Box w={"20%"} display={{ base: 'none', lg: 'block' }}>
             <SnsLinks />
       </Box>   
-      <Spacer></Spacer>
-      <Text textStyle="logo" cursor="pointer" fontSize="4xl" as ="i">
+      <Spacer display={{ base: 'none', lg: 'block' }}></Spacer>
+      <Text textStyle="logo" cursor="pointer" fontSize={{base : "3xl", md : "4xl"}} as ="i">
           Oasys Punks
         </Text>
-        <Spacer></Spacer>
-      <Box w="30">
+        <Spacer ></Spacer>
+      <Box w={{base : "35%", md: "20%"}} >
             <Wallet />
           </Box>
+          
           </HStack>
-      <Center> 
-      
-      </Center>
-
 
 
 

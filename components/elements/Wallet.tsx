@@ -26,7 +26,7 @@ const Component: React.FC = () => {
               backgroundColor="black"
               w="10rem"
             >
-              <Text fontSize="xs">Disconnect Wallet</Text>
+              <Text fontSize={{ sm : "xs" ,md: "md"}}>Disconnect Wallet</Text>
             </Button>
           ) : (
             <Button
@@ -36,7 +36,7 @@ const Component: React.FC = () => {
               color="white"
               w="10rem"
             >
-              <Text fontSize="xs">{truncate(address, 14)}</Text>
+              <Text fontSize={{ sm : "xs" ,md: "md"}}>{truncate(address, 14)}</Text>
             </Button>
           )}
         </div>
@@ -44,10 +44,10 @@ const Component: React.FC = () => {
         <Button
           onClick={connectWallet}
           display="block"
-          textAlign="center"
-          w="10rem"
+          textAlign= "center"
+          w= {{base: "8rem", sm : "10rem", md: "10rem"}}
         >
-          <Text fontSize="s">Connect Wallet</Text>
+          <Text fontSize={{ base : "sm" ,md: "md"}}>Connect Wallet</Text>
         </Button>
       )}
     </>
