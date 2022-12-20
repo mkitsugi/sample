@@ -51,16 +51,10 @@ const Component: React.FC = () => {
         func={twitterUrl}
         icon={'/assets/logo/logo_black_twitter.svg'}
       />
-      <LinkIcon
-        func={discordUrl}
-        icon={'/assets/logo/logo_black_discord.svg'}
-      />
-      <LinkIcon
-        func={instagramUrl}
-        icon={'/assets/logo/logo_black_instagram.svg'}
-      />
+
     </Flex>
   )
 }
 
 export { Component as SnsLinks }
+

@@ -47,7 +47,7 @@ const Component: React.FC = () => {
           textAlign="center"
           w="10rem"
         >
-          <Text fontSize="xs">Connect Wallet</Text>
+          <Text fontSize="s">Connect Wallet</Text>
         </Button>
       )}
     </>

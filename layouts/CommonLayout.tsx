@@ -11,7 +11,8 @@ const Layout = ({ children }: { children: ReactElement }) => {
   const store = useContext(NftContractContext)
 
   return (
-    <Box minH="100vh" backgroundColor="white" position="relative">
+    <Box minH="100vh" backgroundColor="white" position="relative" backgroundImage={'/assets/bg/bg.jpg'} bgPosition="center">
+      
       <Header />
       {store.spMenuOpened && <SpMenu />}
       {store.isClaiming && <Claiming />}

@@ -1,5 +1,6 @@
-import { AspectRatio, Flex, Spinner, Text } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Card, AspectRatio, Image, Flex, Spinner, Text } from '@chakra-ui/react'
+
+//import Image from 'next/image'
 import React from 'react'
 
 export type NftImageProps = {
@@ -11,7 +12,8 @@ const Component: React.FC<NftImageProps> = ({ imageUri }) => {
     <AspectRatio
       maxW="400px"
       ratio={1}
-      backgroundColor="gray.50"
+      
+      //backgroundColor="gray.50"
       position="relative"
     >
       <>
@@ -26,7 +28,10 @@ const Component: React.FC<NftImageProps> = ({ imageUri }) => {
         >
           <Spinner size="md" color="gray.300" />
         </Flex>
-        <Image src={imageUri} width={400} height={400} layout="fill" />
+
+
+          <Image  src={imageUri} width={400} height={400} borderRadius = "20" />
+        
       </>
     </AspectRatio>
   ) : (

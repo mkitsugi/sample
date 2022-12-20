@@ -41,7 +41,7 @@ export const openseaUrl = () => {
 }
 
 export const twitterUrl = () => {
-  return `https://twitter.com/${process.env.NEXT_PUBLIC_TWITER_ACCOUNT}`
+  return `https://twitter.com/oasys_punks`
 }
 
 export const instagramUrl = () => {

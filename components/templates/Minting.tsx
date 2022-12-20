@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text, VStack } from '@chakra-ui/react'
+import { Card, CardBody, Box, Button, Flex, Text, VStack } from '@chakra-ui/react'
 import { useContext } from 'react'
 import { NftContractContext } from '../../contexts/NftContractProvider'
 import { useConnectWallet } from '../../hooks/useConnectWallet'
@@ -24,31 +24,48 @@ const Component: React.FC = () => {
       mx="auto"
     >
       <Fade>
+        
         <VStack spacing={6}>
-          <Box width="240px" height="240px">
+        <Card borderRadius={"30"} bgColor = "white" size = "lg" boxShadow={"2xl"}>
+          <CardBody>
+          <VStack spacing={5}>
+          <Box width="240px" height="240px" >
             <NftImagesSlideShow />
           </Box>
+
+          <Text width="360px" align={"center"}>
+          ALL PROCEEDS DIRECTED TO
+PUBLIC GOODS FUNDING
+MINTING IS COMPLETE
+FOLLOW UPDATES ON DONATION PROCESS
+HTTPS://TWITTER.COM/OPTIPUNK
+      </Text>
 
           <div>
             {address ? (
               <Button onClick={mint} disabled={store.isClaiming}>
                 {store.isClaiming
                   ? 'claiming...'
-                  : `MINT (${store.claimPrice} ETH)`}
+                  : `MINT (${store.claimPrice} OAS)`}
               </Button>
             ) : (
               <Button onClick={connectWallet}>
-                <Text fontSize="xs">Connect Wallet</Text>
+                <Text fontSize="s">Connect Wallet</Text>
               </Button>
             )}
-            <Text pt={2} fontSize="xs" textAlign={'center'}>
+            <Text pt={2} fontSize="xs" textAlign={'center'} paddingTop = "5">
               {store.claimedSupply} / {store.totalSupply}
             </Text>
-            <Text pt={2} fontSize="xs" textAlign={'center'}>
+
+          </div>
+          </VStack>
+          </CardBody>
+        </Card>
+        <Text pt={2} fontSize="xs" textAlign={'center'}>
               goerli testnet
             </Text>
-          </div>
         </VStack>
+
       </Fade>
     </Flex>
   )
